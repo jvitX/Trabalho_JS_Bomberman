@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bomberman 3 Wiki</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5ff;
+            color: #3d004f;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4b0082;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            transition: color 0.5s ease, transform 0.5s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: transparent;
+        }
+
+        a {
+            color: #4b0082;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="page-title">Super Bomberman 3 Wiki</h1>
+    </header>
+
+    <div class="container">
+        <h2>Sobre o Jogo</h2>
+        <p>
+            *Super Bomberman 3* é um clássico jogo de ação e estratégia lançado para o Super Nintendo Entertainment System (SNES) em 1995. 
+            Desenvolvido pela Hudson Soft, ele é o terceiro título da popular franquia *Bomberman*. 
+        </p>
+        <p>
+            O jogo introduziu novos personagens, modos multiplayer aprimorados e uma experiência de jogo ainda mais viciante.
+        </p>
+
+        <h2>História</h2>
+        <p>
+            Em *Super Bomberman 3*, o universo de Bomberman está em perigo após a chegada dos Cinco Malvados (Five Dastardly Bombers), 
+            que foram libertados de sua prisão por Bagular, um vilão intergaláctico determinado a dominar o cosmos. 
+        </p>
+        <p>
+            Os Cinco Malvados são robôs poderosos e traiçoeiros, cada um com habilidades especiais e planetas dedicados ao seu comando. 
+            Bagular os usa para espalhar o caos e criar uma série de desafios para o herói, Bomberman, e seu fiel amigo Louie.
+        </p>
+        <p>
+            A jornada do jogador passa por diversos planetas, cada um com ambientes únicos, inimigos desafiadores, e armadilhas perigosas. 
+            Ao derrotar os Cinco Malvados, o jogador deve enfrentar Bagular em uma batalha final épica para restaurar a paz na galáxia.
+        </p>
+        <img src="Super_Bomberman_3_caixa.webp" alt="Imagem representativa da história do jogo" />
+
+        <h2>Data de Lançamento</h2>
+        <p>
+            O jogo foi lançado em setembro de 1995 no Japão e chegou ao resto do mundo logo depois. 
+            Sua popularidade cresceu devido aos modos cooperativos e competitivos.
+        </p>
+        <img src="download (1).jpeg" alt="Arte promocional de lançamento" />
+    </div>
+
+    <footer>
+        <p><a href="PowerUps.html">PowerUps</a> | <a href="´Personagens.html">Personagens Jogáveis</a></p>
+    </footer>
+
+    <script>
+       
+        const title = document.getElementById('page-title');
+        let hue = 0;
+
+        function animateTitle() {
+            hue += 2;
+            title.style.color = `hsl(${hue}, 100%, 50%)`;
+
+            const offset = Math.sin(hue * Math.PI / 180) * 5;
+            title.style.transform = `translateY(${offset}px)`;
+        }
+
+        setInterval(animateTitle, 50);
+
+     
+        const images = document.querySelectorAll('img');
+
+        images.forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.1)';
+                img.style.boxShadow = '0 15px 25px rgba(0, 0, 0, 0.4)';
+            });
+
+            img.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1)';
+                img.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bomberman 3 - Power-Ups</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #f5f5ff, #e0d4f5);
+            color: #3d004f;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4b0082;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+            border-bottom: 4px solid #30005d;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            transition: color 0.5s ease, transform 0.5s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .powerup {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .powerup img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+        }
+
+        .powerup:hover img {
+            transform: scale(1.2);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            filter: brightness(1.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4b0082;
+            color: white;
+            margin-top: 20px;
+            border-top: 4px solid #30005d;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #ffd900;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="page-title">Power-Ups de Super Bomberman 3</h1>
+    </header>
+
+    <div class="container">
+        <h2>Conheça os Power-Ups</h2>
+   
+        <div class="powerup">
+            <img src="Fogo.webp" alt="Fogo">
+            <p><strong>Fogo:</strong> Aumenta o alcance das explosões de suas bombas.</p>
+        </div>
+        <div class="powerup">
+            <img src="Bomba.webp" alt="Bomb-Up">
+            <p><strong>Bomb-Up:</strong> Permite carregar mais bombas simultaneamente.</p>
+        </div>
+        <div class="powerup">
+            <img src="Patins.webp" alt="Speed-Up">
+            <p><strong>Speed-Up:</strong> Aumenta a velocidade do seu personagem.</p>
+        </div>
+        <div class="powerup">
+            <img src="Fogo_Cheio.webp" alt="Fogo Cheio">
+            <p><strong>Fogo Cheio:</strong> Dá o alcance máximo às explosões de todas as suas bombas.</p>
+        </div>
+        <div class="powerup">
+            <img src="Chute.webp" alt="Chute">
+            <p><strong>Chute:</strong> Permite chutar bombas para movê-las pelo mapa.</p>
+        </div>
+        <div class="powerup">
+            <img src="Glove.webp" alt="Power Glove">
+            <p><strong>Power Glove:</strong> Permite pegar e arremessar bombas.</p>
+        </div>
+        <div class="powerup">
+            <img src="Bomba_de_Borracha_2.webp" alt="Bomba de Borracha">
+            <p><strong>Bomba de Borracha:</strong> Bombas quicam ao serem lançadas.</p>
+        </div>
+        <div class="powerup">
+            <img src="bomba_poderosa_sprite.webp" alt="Bomba Poderosa">
+            <p><strong>Bomba Poderosa:</strong> Bombas com explosões maiores e mais destrutivas.</p>
+        </div>
+        <div class="powerup">
+            <img src="Bomba_Perfuradora.webp" alt="Bomba Perfuradora">
+            <p><strong>Bomba Perfuradora:</strong> Explosões atravessam blocos destrutíveis.</p>
+        </div>
+        <div class="powerup">
+            <img src="Controle_Remoto.webp" alt="Controle Remoto">
+            <p><strong>Controle Remoto:</strong> Permite detonar bombas manualmente.</p>
+        </div>
+        <div class="powerup">
+            <img src="Passagem_de_Bomba.webp" alt="Passagem de bombas">
+            <p><strong>Passagem em bombas:</strong> Permite andar por cima das bombas sem detoná-las.</p>
+        </div>
+        <div class="powerup">
+            <img src="Passagem_de_Bloco_Macio.webp" alt="Passar em Blocos">
+            <p><strong>Passar em Blocos:</strong> Permite atravessar blocos destrutíveis.</p>
+        </div>
+        <div class="powerup">
+            <img src="Relogio.webp" alt="Relógio">
+            <p><strong>Relógio:</strong> Paralisa os inimigos por alguns segundos.</p>
+        </div>
+        <div class="powerup">
+            <img src="Colete.webp" alt="Colete de Invencibilidade">
+            <p><strong>Colete de Invencibilidade:</strong> Protege você contra explosões por um curto período.</p>
+        </div>
+        <div class="powerup">
+            <img src="Coração.webp" alt="Coração">
+            <p><strong>Coração:</strong> Permite sobreviver a uma explosão.</p>
+        </div>
+        <div class="powerup">
+            <img src="1-Up.webp" alt="1-Up">
+            <p><strong>1-Up:</strong> Concede uma vida extra.</p>
+        </div>
+        <div class="powerup">
+            <img src="Geta.webp" alt="Geta">
+            <p><strong>Geta:</strong> Reduz temporariamente a velocidade do seu personagem.</p>
+        </div>
+        <div class="powerup">
+            <img src="Sorvete.webp" alt="Sorvete">
+            <p><strong>Sorvete:</strong> Aumenta sua pontuação.</p>
+        </div>
+        <div class="powerup">
+            <img src="maca.webp" alt="Maçã">
+            <p><strong>Maçã:</strong> Outro bônus que aumenta sua pontuação.</p>
+        </div>
+        <div class="powerup">
+            <img src="Cranio.webp" alt="Crânio">
+            <p><strong>Crânio:</strong> Aplica efeitos negativos aleatórios ao seu personagem.</p>
+        </div>
+        <div class="powerup">
+            <img src="Ovo.webp" alt="Ovo">
+            <p><strong>Ovo:</strong> Permite montar um Louie, oferecendo habilidades especiais.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="index.html">Início</a> | <a href="Personagens.html">Personagesn jogáveis</a></p>
+    </footer>
+
+    <script>
+        const powerupImages = document.querySelectorAll('.powerup img');
+        powerupImages.forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.3)';
+                img.style.boxShadow = '0 15px 25px rgba(0, 0, 0, 0.4)';
+                img.style.filter = 'brightness(1.3)';
+            });
+
+            img.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1)';
+                img.style.boxShadow = 'none';
+                img.style.filter = 'none';
+            });
+        });
+
+        const title = document.getElementById('page-title');
+        let hue = 0;
+
+        function animateTitle() {
+            hue += 2;
+            title.style.color = `hsl(${hue}, 100%, 50%)`;
+            const offset = Math.sin(hue * Math.PI / 180) * 5;
+            title.style.transform = `translateY(${offset}px)`;
+        }
+
+        setInterval(animateTitle, 50);
+
+        title.addEventListener('click', () => {
+            title.style.transition = 'transform 0.3s ease';
+            title.style.transform = 'scale(1.2)';
+            setTimeout(() => title.style.transform = 'scale(1)', 300);
+        });
+
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        function handleScroll() {
+            fadeElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    </script>
+</body>
+</html>
